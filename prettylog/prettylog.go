@@ -18,7 +18,7 @@ const (
 
 	reset = "\033[0m"
 
-	black        = 30
+	black        = 37
 	red          = 31
 	green        = 32
 	yellow       = 33
