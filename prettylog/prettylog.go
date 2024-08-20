@@ -18,7 +18,7 @@ const (
 
 	reset = "\033[0m"
 
-	black        = 37
+	black        = 30
 	red          = 31
 	green        = 32
 	yellow       = 33
@@ -169,7 +169,7 @@ func (h *Handler) Handle(ctx context.Context, r slog.Record) error {
 		out.WriteString(" ")
 	}
 	if len(attrsAsBytes) > 0 {
-		out.WriteString(colorize(darkGray, string(attrsAsBytes)))
+		out.WriteString(colorize(lightGray, string(attrsAsBytes)))
 	}
 
 	_, err = io.WriteString(h.writer, out.String()+"\n")
